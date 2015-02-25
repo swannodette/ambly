@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "DummyProtocol.h"
 
 @class JSContext;
 
@@ -7,7 +8,7 @@
  the JavaScriptCore execution environment with a few extra things that are either 
  needed or nice for ClojureScript execution.
  */
-@interface ABYContextManager : NSObject
+@interface ABYContextManager : NSObject <DummyProtocol>
 
 /**
  The context being managed.

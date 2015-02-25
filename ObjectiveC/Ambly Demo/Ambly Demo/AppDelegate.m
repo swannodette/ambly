@@ -1,5 +1,5 @@
+#import <objc/runtime.h>
 #import "AppDelegate.h"
-
 #import "ABYContextManager.h"
 #import "ABYServer.h"
 
@@ -40,6 +40,9 @@ void uncaughtExceptionHandler(NSException *exception) {
     self.replServer = [[ABYServer alloc] initWithContext:self.contextManager.context
                                  compilerOutputDirectory:compilerOutputDirectory];
     [self.replServer startListening:50505];
+    
+    Protocol *p0 = objc_getProtocol([@"DummyProtocol" UTF8String]);
+    NSLog(@"%s", protocol_getName(p0));
 
     return YES;
 }
