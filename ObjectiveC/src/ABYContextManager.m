@@ -82,7 +82,8 @@
         NSString* sourceText = [NSString stringWithContentsOfFile:readPath encoding:NSUTF8StringEncoding error:&error];
         
         if (!error && sourceText) {
-            [currentContext evaluateScript:sourceText withSourceURL:[NSURL fileURLWithPath:path]];
+            // [currentContext evaluateScript:sourceText withSourceURL:[NSURL fileURLWithPath:path]];
+            [currentContext evaluateScript:sourceText];
         }
         
         return [JSValue valueWithUndefinedInContext:currentContext];
