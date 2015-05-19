@@ -11,4 +11,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.requires_arc          = true
   s.dependency "GCDWebServer/WebDAV", "~> 3.2.2"
+  s.frameworks = 'JavaScriptCore'
 end
