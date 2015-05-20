@@ -12,4 +12,9 @@ Pod::Spec.new do |s|
   s.requires_arc          = true
   s.dependency "GCDWebServer/WebDAV", "~> 3.2.2"
   s.frameworks = 'JavaScriptCore'
+  s.xcconfig = { 
+    'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/Ejecta/Source/lib"', 
+    'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/Ejecta/Source/lib"', 
+    'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/Ejecta/Source/lib"'
+  }
 end
